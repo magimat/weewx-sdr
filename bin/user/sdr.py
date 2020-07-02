@@ -468,8 +468,8 @@ class Acurite5n1PacketV2(Packet):
             pkt['wind_speed'] = Packet.get_float(obj, 'wind_avg_km_h')
         if 'wind_dir_deg' in obj:
             pkt['wind_dir'] = Packet.get_float(obj, 'wind_dir_deg')
-        if 'rain_mm' in obj:
-            pkt['rain_total'] = Packet.get_float(obj, 'rain_mm') / 25.4
+        if 'rain_in' in obj:
+            pkt['rain_total'] = Packet.get_float(obj, 'rain_in')
         if 'temperature_F' in obj:
             pkt['temperature'] = Packet.get_float(obj, 'temperature_F')
         elif 'temperature_C' in obj:
